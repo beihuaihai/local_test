@@ -1,0 +1,41 @@
+
+
+git clone git@10.254.2.104:root/essd.git
+
+git branch -a
+
+git checkout remotes/origin/dev_master
+
+git checkout -b dev_master_bhh
+
+git submodule update --init
+
+git pull origin dev_master
+
+
+
+*****************spdk*******************
+
+
+git pull origin essd_ebsdriver
+
+
+
+
+
+################查看主blockmaster leader###########
+export ETCDCTL_API=3
+etcdctl get "" --prefix
+
+
+
+********************************************************
+更新ext：
+rpm -ivh essd-1.0.0-1-common.rpm essd-1.0.0-1-extentserver.rpm essd-extentserver-debuginfo-1.0.0-1.x86_64.rpm essd-common-debuginfo-1.0.0-1.x86_64.rpm  essd-1.0.0-1-tools.rpm essd-tools-debuginfo-1.0.0-1.x86_64.rpm essd-1.0.0-1-devel.rpm   --nodeps --force
+更新essd
+rm -rf essd-extentserver-debuginfo-1.0.0-1.x86_64.rpm essd-1.0.0-1-extentserver.rpm
+
+
+
+
+
